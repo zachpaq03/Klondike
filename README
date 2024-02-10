@@ -1,0 +1,19 @@
+* Fixed an issue when moving cards from one pile to another. Before, the loop was set for when i < the size of the pile,
+but since I was removing elements from the pile the loop did not go for as long as expected. I fixed this by setting
+and int = to the length of the pile before removing any cards, so that the loop iterates for as long as necessary.
+
+* Fixed an issue in my textual view where when there was only one row of cascade piles it would not print a new line.
+
+HW4
+
+* Fixed Javadoc for basic klondike.
+
+* Made Enums their own class and got rid of redundant enum classes.
+
+* Added parameters to legalMoveCascadePile. These extra parameters do not do anything in the abstract class's version
+of the method, but allow the subclasses (specifically Whitehead klondike) to check the validity of moves without accessing
+fields.
+
+* Slightly changed isGameOver to check if their are legal moves left for any of the cards that are visible in the cascade pile.
+
+* Abstracted tests to avoid code re-usage.
